@@ -21,6 +21,11 @@
     .slide.active {
       display: block;
     }
+    .slide-content {
+      padding-bottom: 100px; /* espacio para que no tape el botón */
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
     .nav-buttons {
       position: fixed;
       bottom: 20px;
@@ -39,23 +44,28 @@
       font-weight: bold;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
-    .btn-nav.btn-contrast {
-  background: linear-gradient(135deg, #ffffff, #e2e8f0); /* Blanco a gris claro */
-  color: #1a202c; /* Gris oscuro: muy legible */
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6); /* Ligero borde blanco para contraste sobre fondo oscuro */
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-}
+    @media (max-width: 768px) {
+      .slide-content {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+      }
+      .nav-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        bottom: 10px;
+      }
+      .btn-nav {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.875rem;
+      }
+    }
   </style>
 </head>
 <body class="overflow-x-hidden">
   <!-- Slides -->
   <div id="slide-container">
     <section class="slide active overflow-y-auto bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center px-4 py-8">
-      <div class="w-full max-w-screen-lg mx-auto text-center">
+      <div class="w-full max-w-screen-lg mx-auto text-center slide-content">
         <div class="mb-8 animate-bounce">
           <i class="fas fa-rocket text-5xl md:text-6xl text-white opacity-90"></i>
         </div>
