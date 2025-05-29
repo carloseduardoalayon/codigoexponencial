@@ -10,6 +10,7 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #000;
     }
     .pulse-icon {
       animation: pulse 2s infinite;
@@ -25,16 +26,22 @@
       0%, 100% { transform: translateX(0); }
       50% { transform: translateX(10px); }
     }
+    .high-contrast-text {
+      color: #ffffff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen px-4 py-10 text-white">
+<body class="bg-black bg-gradient-to-br from-slate-900 to-slate-800 min-h-screen px-4 py-10 text-white">
   <div class="max-w-screen-xl mx-auto">
 
     <!-- Header -->
     <div class="text-center mb-10">
       <div class="flex items-center justify-center mb-4">
         <i class="fas fa-globe-americas text-3xl sm:text-4xl text-blue-300 mr-4"></i>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">Revolución <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Exponencial</span></h1>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Revolución <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Exponencial</span>
+        </h1>
       </div>
       <p class="text-base sm:text-lg text-gray-200">Del Privilegio al Acceso Global</p>
     </div>
@@ -43,7 +50,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
       <!-- ANTES -->
-      <div class="lg:col-span-5 bg-red-800 bg-opacity-20 btn-nav btn-contrast rounded-2xl p-6 border border-red-400 border-opacity-40">
+      <div class="lg:col-span-5 bg-red-800 bg-opacity-20 rounded-2xl p-6 border border-red-400 border-opacity-40">
         <div class="text-center mb-6">
           <div class="inline-flex items-center bg-red-500 bg-opacity-20 rounded-full px-4 py-2 mb-4">
             <i class="fas fa-clock text-red-300 mr-2"></i>
@@ -57,17 +64,17 @@
 
         <div class="space-y-3 mb-6">
           <div class="flex items-center text-gray-100">
-            <i class="fas fa-user-tie btn-nav btn-contrast text-purple-400 mr-3 w-5"></i><span class="text-sm">Presidentes</span>
+            <i class="fas fa-user-tie text-purple-400 mr-3 w-5"></i><span class="text-sm">Presidentes</span>
           </div>
           <div class="flex items-center text-gray-100">
-            <i class="fas fa-building btn-nav btn-contrast text-blue-300 mr-3 w-5"></i><span class="text-sm">Magnates empresariales</span>
+            <i class="fas fa-building text-blue-300 mr-3 w-5"></i><span class="text-sm">Magnates empresariales</span>
           </div>
           <div class="flex items-center text-gray-100">
-            <i class="fas fa-shield-alt btn-nav btn-contrast text-red-300 mr-3 w-5"></i><span class="text-sm">Directores de inteligencia</span>
+            <i class="fas fa-shield-alt text-red-300 mr-3 w-5"></i><span class="text-sm">Directores de inteligencia</span>
           </div>
         </div>
 
-        <div class="bg-slate-800 bg-opacity-80 rounded-xl p-4 mb-6 text-center">
+        <div class="bg-slate-800 bg-opacity-90 rounded-xl p-4 mb-6 text-center">
           <i class="fas fa-dollar-sign text-red-400 text-2xl mb-2 block"></i>
           <div class="text-white font-bold text-lg">McKinsey</div>
           <div class="text-red-300 font-bold text-2xl">+$500,000</div>
@@ -89,7 +96,7 @@
       </div>
 
       <!-- HOY -->
-      <div class="lg:col-span-5 bg-green-800 bg-opacity-20 btn-nav btn-contrast rounded-2xl p-6 border border-green-400 border-opacity-40">
+      <div class="lg:col-span-5 bg-green-800 bg-opacity-20 rounded-2xl p-6 border border-green-400 border-opacity-40">
         <div class="text-center mb-6">
           <div class="inline-flex items-center bg-green-500 bg-opacity-20 rounded-full px-4 py-2 mb-4">
             <i class="fas fa-calendar-day text-green-300 mr-2"></i>
@@ -105,7 +112,7 @@
             <div class="text-gray-100 text-sm">al mes</div>
           </div>
 
-          <div class="bg-slate-800 bg-opacity-80 rounded-xl p-4 text-center">
+          <div class="bg-slate-800 bg-opacity-90 rounded-xl p-4 text-center">
             <div class="text-green-300 font-bold text-sm mb-2">MÁS PODER ANALÍTICO QUE</div>
             <div class="text-white font-semibold">Un jefe de estado en 1980</div>
           </div>
@@ -127,8 +134,8 @@
 
     <!-- Declaración final -->
     <div class="text-center mt-10">
-      <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-4 max-w-3xl mx-auto shadow-xl">
-        <p class="text-base sm:text-lg text-white leading-relaxed">
+      <div class="bg-slate-900 bg-opacity-80 rounded-xl p-4 max-w-3xl mx-auto shadow-xl">
+        <p class="text-base sm:text-lg high-contrast-text leading-relaxed">
           <span class="text-yellow-400 font-bold">La democratización de la inteligencia</span> ha transformado el mundo. Lo que antes costaba millones, ahora está al alcance de todos.
         </p>
       </div>
