@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Exponencial</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      transition: all 0.6s ease;
+    }
+    .slide.active {
+      display: block;
+    }
+    .nav-buttons {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 50;
+    }
+    .btn-nav {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <!-- Slides -->
+  <div id="slide-container">
+    <section class="slide active" id="slide-1">
+      <!-- Contenido de 1.html -->
+      <iframe src="1.html" class="w-full h-screen"></iframe>
+    </section>
+    <section class="slide" id="slide-2">
+      <!-- Contenido de 2.html -->
+      <iframe src="2.html" class="w-full h-screen"></iframe>
+    </section>
+    <section class="slide" id="slide-3">
+      <!-- Contenido de 3.html -->
+      <iframe src="3.html" class="w-full h-screen"></iframe>
+    </section>
+    <section class="slide" id="slide-4">
+      <!-- Contenido de 4.html -->
+      <iframe src="4.html" class="w-full h-screen"></iframe>
+    </section>
+    <section class="slide" id="slide-5">
+      <!-- Contenido de 5.html -->
+      <iframe src="5.html" class="w-full h-screen"></iframe>
+    </section>
+    <section class="slide" id="slide-6">
+      <!-- Contenido de 6.html (renombrado correctamente) -->
+      <iframe src="6.html" class="w-full h-screen"></iframe>
+    </section>
+  </div>
+
+  <!-- Navegación -->
+  <div class="nav-buttons">
+    <button class="btn-nav" onclick="prevSlide()">Anterior</button>
+    <button class="btn-nav" onclick="nextSlide()">Siguiente</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>

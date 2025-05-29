@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolución Exponencial</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .before-section {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(185, 28, 28, 0.1) 100%);
+        }
+        .today-section {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(21, 128, 61, 0.1) 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+        }
+        .slide-enter {
+            animation: slideIn 0.8s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .price-highlight {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .pulse-icon {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .transform-arrow {
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="w-full" style="width: 1280px; min-height: 720px;">
+        <div class="px-12 py-8">
+            
+            <!-- Header -->
+            <div class="text-center mb-8 slide-enter">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-globe-americas text-4xl text-blue-400 mr-4"></i>
+                    <h1 class="text-4xl font-bold text-white">Revolución <span class="price-highlight">Exponencial</span></h1>
+                </div>
+                <p class="text-xl text-gray-300">Del Privilegio al Acceso Global</p>
+            </div>
+            
+            <!-- Main Comparison Grid -->
+            <div class="grid grid-cols-12 gap-6 h-full">
+                
+                <!-- BEFORE Section -->
+                <div class="col-span-5 slide-enter" style="animation-delay: 0.2s;">
+                    <div class="before-section rounded-2xl p-6 h-full border border-red-500 border-opacity-30">
+                        
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center bg-red-500 bg-opacity-20 rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-clock text-red-400 mr-2"></i>
+                                <span class="text-red-400 font-bold">ANTES</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Exclusive Access -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+                                <i class="fas fa-crown text-yellow-400 mr-2"></i>
+                                Acceso Exclusivo
+                            </h3>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center text-gray-300">
+                                    <i class="fas fa-user-tie text-purple-400 mr-3 w-5"></i>
+                                    <span class="text-sm">Presidentes</span>
+                                </div>
+                                <div class="flex items-center text-gray-300">
+                                    <i class="fas fa-building text-blue-400 mr-3 w-5"></i>
+                                    <span class="text-sm">Magnates empresariales</span>
+                                </div>
+                                <div class="flex items-center text-gray-300">
+                                    <i class="fas fa-shield-alt text-red-400 mr-3 w-5"></i>
+                                    <span class="text-sm">Directores de inteligencia</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Cost Section -->
+                        <div class="bg-black bg-opacity-40 rounded-xl p-4 mb-4">
+                            <div class="text-center">
+                                <i class="fas fa-dollar-sign text-red-400 text-2xl mb-2"></i>
+                                <div class="text-white font-bold text-lg">McKinsey</div>
+                                <div class="text-red-400 font-bold text-2xl">+$500,000</div>
+                                <div class="text-gray-400 text-xs">al año por análisis</div>
+                                <div class="text-red-300 text-sm mt-1">(≈ $1.5M hoy)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <i class="fas fa-lock text-red-400 text-4xl opacity-30"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Transform Arrow -->
+                <div class="col-span-2 flex items-center justify-center slide-enter" style="animation-delay: 0.4s;">
+                    <div class="text-center">
+                        <i class="fas fa-arrow-right text-4xl text-yellow-400 transform-arrow mb-4"></i>
+                        <div class="text-yellow-400 font-bold text-sm">TRANSFORMACIÓN</div>
+                    </div>
+                </div>
+                
+                <!-- TODAY Section -->
+                <div class="col-span-5 slide-enter" style="animation-delay: 0.6s;">
+                    <div class="today-section rounded-2xl p-6 h-full border border-green-500 border-opacity-30">
+                        
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center bg-green-500 bg-opacity-20 rounded-full px-4 py-2 mb-4">
+                                <i class="fas fa-calendar-day text-green-400 mr-2"></i>
+                                <span class="text-green-400 font-bold">HOY</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Revolutionary Access -->
+                        <div class="mb-6">
+                            <div class="bg-gradient-to-r from-green-500 to-blue-500 rounded-xl p-4 mb-4">
+                                <div class="text-center">
+                                    <i class="fas fa-fire text-white text-2xl mb-2 pulse-icon"></i>
+                                    <div class="text-white font-bold text-lg">ChatGPT</div>
+                                    <div class="text-yellow-300 font-bold text-3xl">$20</div>
+                                    <div class="text-gray-100 text-sm">al mes</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-black bg-opacity-40 rounded-xl p-4 text-center">
+                                <div class="text-green-400 font-bold text-sm mb-2">MÁS PODER ANALÍTICO QUE</div>
+                                <div class="text-white font-semibold">Un jefe de estado en 1980</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Global Access -->
+                        <div class="text-center mb-4">
+                            <div class="flex items-center justify-center mb-3">
+                                <i class="fas fa-mobile-alt text-blue-400 mr-2"></i>
+                                <span class="text-white font-semibold text-sm">En tu bolsillo</span>
+                            </div>
+                            <p class="text-gray-300 text-sm">Un ejército de expertos disponible 24/7</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <i class="fas fa-unlock text-green-400 text-4xl opacity-30"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Bottom Impact Statement -->
+            <div class="text-center mt-6 slide-enter" style="animation-delay: 0.8s;">
+                <div class="card-gradient rounded-xl p-4 max-w-4xl mx-auto">
+                    <p class="text-lg text-white">
+                        <span class="text-yellow-400 font-bold">La democratización de la inteligencia</span> ha transformado el mundo. 
+                        Lo que antes costaba millones, ahora está al alcance de todos.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
